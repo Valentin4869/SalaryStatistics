@@ -13,6 +13,9 @@ struct Person
 {
     string name;
     int salary;
+
+	Person(std::string Name, int Salary) { name = Name; salary = Salary; }
+	bool operator<( Person*);
 };
 
 class Datastructure
@@ -37,7 +40,15 @@ public:
     Person* third_quartile_salary();
 
 private:
-    // Add your implementation here
+
+	
+	bool salary_sorted;
+	bool names_sorted;
+	vector<Person*> personnel_ss;
+	vector<Person*> personnel_ns;
+	int personnel_N;
+
+	
 };
 
 #endif // DATASTRUCTURE_HPP
